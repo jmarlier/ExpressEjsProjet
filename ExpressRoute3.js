@@ -27,22 +27,29 @@ app.get("/selectone", (req, res) => {
     console.log(req.query.id)
     const id = req.query.id
     if (id == 1) {
-        res.sendFile(
             res.sendFile(__dirname + "/views/Coca.html")
-        )
     }
     if (id == 2) {
-        res.sendFile(
             res.sendFile(__dirname + "/views/Badoit.html")
-        )
     }
     if (id == 3) {
-        res.sendFile(
             res.sendFile(__dirname + "/views/Vichy.html")
-        )
     }    
 })
 
+app.get("/ejs1", (req, res) => {
+    // Un objet JSON
+    const personne = {prenom: "Pascal", nom: "Buguet"}
+
+    res.render(
+        "Ejs1.ejs",
+        {
+            titre: "Hello EJS 1 !!!",
+            texte: "EJS est un moteur de templates ...",
+            objetPersonne: personne
+        }
+    )
+})
 
 // Le code de gestion des routes se trouve au-dessus
 app.use( (req, res, next) => {
