@@ -1,0 +1,25 @@
+/* style.css dans /public/css/ */
+
+a{
+    color: white;
+}
+header{
+    background-color: fuchsia; 
+    color: white; 
+    padding: 5px;
+}
+body{
+    background-color: silver; 
+    color: white; 
+    padding: 5px;
+}
+footer{
+    background-color: dimgray; 
+    color: white; 
+    padding: 5px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
